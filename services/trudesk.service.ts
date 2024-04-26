@@ -45,20 +45,20 @@ class TrudeskService {
       const owner = await ownerApi.send()
 
       // To save the issue 
-      const { issues } = req.body
-      console.log('issues==>', issues)
-      const saveIssue = new GetHttpRequest({
-          url: '/api/v1/issue/save',
-          method: 'post',
-          data: {
-            ...issues
-          },
-          headers: {
-            "accesstoken": owner?.data?.accessToken
-          }
-      })
-      const saveIssues = await saveIssue.send()
-      console.log('saveIssues', saveIssues)
+      // const { issues } = req.body
+      // console.log('issues==>', issues)
+      // const saveIssue = new GetHttpRequest({
+      //     url: '/api/v1/ticket/create',
+      //     method: 'post',
+      //     data: {
+      //       ...issues
+      //     },
+      //     headers: {
+      //       "accesstoken": owner?.data?.accessToken
+      //     }
+      // })
+      // const saveIssues = await saveIssue.send()
+      // console.log('saveIssues', saveIssues)
 
       // To fetch group Id
       const fetchGroup = new GetHttpRequest({
