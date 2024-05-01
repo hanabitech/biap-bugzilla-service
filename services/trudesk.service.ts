@@ -164,7 +164,7 @@ class TrudeskService {
       const owner = await ownerApi.send()
 
       const getInstance = new GetHttpRequest({
-        url: `/api/v1/ticketDetails/${req.params.id}`,
+        url: `/api/v1/tickets/${req.params.id}`,
         method: 'get',
         headers: {  "Content-Type": "application/json", 'accesstoken': owner?.data?.accessToken },
       })
@@ -201,7 +201,7 @@ class TrudeskService {
 
         
       const getInstance = new GetHttpRequest({
-        url: `/api/v1/ticketDetails/${req.params.id}`,
+        url: `/api/v1/tickets/${req.params.id}`,
         method: 'get',
         headers: {  "Content-Type": "application/json", 'accesstoken': owner?.data?.accessToken },
       })
